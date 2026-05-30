@@ -1,5 +1,6 @@
 package Arrays;
 
+
 public class arrayProblems {
 
     public static void printPairs(int[] numbers) {
@@ -82,5 +83,40 @@ public class arrayProblems {
             }
         }
         System.out.println("Maximum subarray sum : " + maxSum);
+    }
+    
+    public static void kadanes(int numbers[]) {
+    	
+    	//if all numbers are negative
+    	boolean isNegative = true;
+    	int smallNegative = numbers[0];
+    	
+    	for(int i = 0; i < numbers.length; i++) {
+    		if(numbers[i] >= 0) {
+    			isNegative = false;
+    		}
+    	}
+    	
+    	if(isNegative) {
+    		for(int i = 1; i < numbers.length; i++) {
+    			if(smallNegative < numbers[i]) {
+        			smallNegative = numbers[i];    				
+        		}
+    		}
+    		System.out.println("Our max subarray sum is : " + smallNegative);
+    		return;
+    	}
+    	
+    	int ms = Integer.MIN_VALUE;
+    	int cs = 0;
+    	
+    	for(int i = 0; i < numbers.length; i++) {
+    		cs += numbers[i];
+    		if(cs < 0) {
+    			cs = 0;
+    		}
+    		ms = Math.max(cs, ms);
+    	}
+    	System.out.println("Our max subarray sum is : " + ms);
     }
 }
