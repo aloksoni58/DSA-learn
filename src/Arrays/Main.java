@@ -11,5 +11,8 @@ public class Main {
         arrayProblems.minMaxSubarraySum(numbers);
         arrayProblems.maxSubarraySumUsingPrefixSum(numbers);
         arrayProblems.kadanes(numbers);
+    	
+    	int[] arr = {4,2,0,6,3,2,5};
+    	TrappedRainWater.trappedRainWater(arr);
     }
 }
