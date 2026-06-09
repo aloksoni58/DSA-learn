@@ -18,5 +18,10 @@ public class Main {
 		int[] prices = { 7, 1, 5, 3, 6, 4 };
 //		int[] prices = {7,6,5,4,3,1};
 		BuyAndSellStocks.buyAndSellStocks(prices);
+		
+		int[] arr2 = {5,4,3,1,2};
+		Sortings.bubbleSort(arr2);
+		Sortings.selectionSort(arr2);
+		Sortings.insertionSort(arr2);
 	}
 }
