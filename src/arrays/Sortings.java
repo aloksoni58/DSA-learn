@@ -58,11 +58,42 @@ public class Sortings {
 			}
 			arr[j+1] = temp;
 		}
-		System.out.println("\nArray after selection sort");
+		System.out.println("\nArray after insertion sort");
 		for (int i : arr) {
 			System.out.print(i + ", ");
 		}
 		
+	}
+	
+	public static void countingSort(int[] arr) {
+		int max = arr[0];
+		//find max element from the array for count length
+		for(int i = 1; i< arr.length; i++) {
+			if(arr[i] > max) {
+				max = arr[i];
+			}
+		}
+		
+		//create count array and initialize it with frequency of elements
+		int[] count = new int[max+1];
+		for(int i = 0; i < arr.length; i++) {
+			count[arr[i]]++;
+		}
+		
+		
+		//store in the the array in sorted order
+		int j = 0;
+		for(int i = 0; i < count.length-1; i++) {
+			while(count[i] > 0) {
+				arr[j] = i;
+				count[i]--;
+				j++;
+			}
+		}
+		System.out.println("\nArray after counting sort");
+		for (int i : arr) {
+			System.out.print(i + ", ");
+		}
 	}
 	
 }

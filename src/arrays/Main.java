@@ -23,5 +23,7 @@ public class Main {
 		Sortings.bubbleSort(arr2);
 		Sortings.selectionSort(arr2);
 		Sortings.insertionSort(arr2);
+		int[] arr3 = {1,4,1,3,2,4,3,7};
+		Sortings.countingSort(arr3);
 	}
 }
