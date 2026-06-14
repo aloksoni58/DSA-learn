@@ -39,12 +39,28 @@ public class Main {
 		int[][] matrix4 = { { 1, 2, 3, 4, 5 }, { 6, 7, 8, 9, 10 }, { 11, 12, 13, 14, 15 }, { 16, 17, 18, 19, 20 },
 				{ 21, 22, 23, 24, 25 } };
 		TwoDArraysProblem.spiralPrint(matrix4);
-		
-		int[][] matrix5 = {{1,2,3,4},{5,6,7,8},{9,10,11,12}};
+
+		int[][] matrix5 = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
 		TwoDArraysProblem.spiralPrint(matrix5);
-		
+
 		TwoDArraysProblem.printMatrix(TwoDArraysProblem.generateMatrix(3));
 		TwoDArraysProblem.printMatrix(TwoDArraysProblem.generateMatrix(4));
 		TwoDArraysProblem.printMatrix(TwoDArraysProblem.generateMatrix(5));
+
+		TwoDArraysProblem.diagonalSum(matrix);
+		TwoDArraysProblem.diagonalSum(matrix2);
+
+		TwoDArraysProblem.staircaseSearch(matrix5, 11);
+		TwoDArraysProblem.staircaseSearch(matrix4, 19);
+		TwoDArraysProblem.staircaseSearch(matrix4, 100);
+
+		int[][] matrix6 = { { 4, 7, 8 }, { 8, 8, 7 } };
+		TwoDArraysProblem.count_7s(matrix5);
+		TwoDArraysProblem.count_7s(matrix6);
+		
+		TwoDArraysProblem.sumOfSecondRow(matrix6);
+		TwoDArraysProblem.sumOfSecondRow(matrix4);
+		
+		TwoDArraysProblem.findTranspose(matrix6);
 	}
 }
